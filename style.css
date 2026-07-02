@@ -7,3 +7,28 @@
 a:hover {
     background-color: azure;
 }
+
+.appgroup {
+    width: min-content;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    height: 100vh;
+    font-family: "Geist Pixel";
+    font-weight: 100;
+}
+
+.app {
+    flex-grow:0;
+    text-align: center;
+    margin-right: 8vh;
+}
+
+.apptext {
+    margin-top: 0px;
+    width: 200%;
+}
+
+.icon {
+    width: 200%;
+}
