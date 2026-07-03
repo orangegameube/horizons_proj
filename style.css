@@ -39,9 +39,12 @@ a:hover {
   background-color: #f1f1f1;
   border: 1px solid #d3d3d3;
   text-align: center;
+  overflow: hidden;
   resize: both;
 }
 
 body {
     margin: 0px 0px 0px 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }

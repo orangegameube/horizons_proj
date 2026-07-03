@@ -12,6 +12,7 @@ function dragElement(elmnt) {
   }
 
   function dragMouseDown(e) {
+    if (maximized) return;
     e = e || window.event;
     e.preventDefault();
     // get the mouse cursor position at startup:
@@ -61,24 +62,36 @@ function exitTab() {
 
 let maximized = false;
 let pos = [];
+let size = [];
 
 function resizeTab(id) {
   let element = document.getElementById(id);
+  // check if the tab is already maximized
   if (maximized == false) {
-    var offsets = element.getBoundingClientRect();
-    pos.push(offsets.left)
-    pos.push(offsets.top)
-    // append x and y coordinates to coordinates list
+    var ogWindow = element.getBoundingClientRect();
+    pos.push(ogWindow.left);
+    pos.push(ogWindow.top);
+    size.push(ogWindow.width);
+    size.push(ogWindow.height);
+    // saving the position and sizing of the original tiny window
+    element.style.left = "0px";
+    element.style.top = "0px";
     element.style.width = "100%";
     element.style.height = "100%";
     element.style.resize = "none";
     maximized = true;
+    // making the window big!
   }
   else {
-    element.style.width = "40vh";
-    element.style.height = "40vh";
     element.style.resize = "both";
-    pos.splice(0,A.length)
+    element.style.left = pos[0] + "px";
+    element.style.top = pos[1] + "px";
+    element.style.width = size[0] + "px";
+    element.style.height = size[1] + "px";
+    // make the window small again with its original sizing!
+    pos.splice(0,pos.length)
+    size.splice(0,size.length)
+    // restore lists to original blank states
     maximized = false;
   }
 }
