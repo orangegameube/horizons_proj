@@ -60,16 +60,25 @@ function exitTab() {
 }
 
 let maximized = false;
+let pos = [];
 
-function resizeTab() {
+function resizeTab(id) {
+  let element = document.getElementById(id);
   if (maximized == false) {
-    document.getElementById("mywindow").style.width = "100%";
-    document.getElementById("mywindow").style.height = "100%";
+    var offsets = element.getBoundingClientRect();
+    pos.push(offsets.left)
+    pos.push(offsets.top)
+    // append x and y coordinates to coordinates list
+    element.style.width = "100%";
+    element.style.height = "100%";
+    element.style.resize = "none";
     maximized = true;
   }
   else {
-    document.getElementById("mywindow").style.width = "40vh";
-    document.getElementById("mywindow").style.height = "40vh";
+    element.style.width = "40vh";
+    element.style.height = "40vh";
+    element.style.resize = "both";
+    pos.splice(0,A.length)
     maximized = false;
   }
 }
