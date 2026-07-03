@@ -14,14 +14,19 @@
 
     <div>
 
-        <div id="mydiv">
+        <div id="mywindow">
             <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
-            <div id="mydivheader">Click here to move</div>
+             <div id="mywindowedge">
+                <div id="mywindowheader">Click here to move</div>
+                <button id="expand" onclick="resizeTab()">Click here to expand</button>
+                <button id="exit" onclick="exitTab()">Click here to exit</button>
+             </div>
+             <div id="window1">This is a window!</div>
         </div>
 
         <div class="appgroup">
             <div class="app" id="about">
-                <img class="icon" src="images/placeholder.jpg">
+                <img class="icon" src="images/placeholder.jpg" onclick="openTab()">
                 <h4 class="apptext">About</h4>
             </div>
             <div class="app" id="gallery">

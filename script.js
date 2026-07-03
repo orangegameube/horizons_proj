@@ -1,11 +1,11 @@
 // Make the DIV element draggable:
-dragElement(document.getElementById("mydiv"));
+dragElement(document.getElementById("mywindow"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "edge")) {
+  if (document.getElementById(elmnt.id + "header")) {
     // check to verify if present
-    document.getElementById(elmnt.id + "edge").onmousedown = dragMouseDown;
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
   } else {
     // otherwise, move the DIV from anywhere inside the DIV:
     elmnt.onmousedown = dragMouseDown;
@@ -39,5 +39,37 @@ function dragElement(elmnt) {
     // stop moving when mouse button is released:
     document.onmouseup = null;
     document.onmousemove = null;
+  }
+}
+
+
+
+
+
+
+
+
+document.getElementById("mywindow").style.visibility = "hidden";
+
+function openTab() {
+  document.getElementById("mywindow").style.visibility = "visible";
+}
+
+function exitTab() {
+  document.getElementById("mywindow").style.visibility = "hidden";
+}
+
+let maximized = false;
+
+function resizeTab() {
+  if (maximized == false) {
+    document.getElementById("mywindow").style.width = "100%";
+    document.getElementById("mywindow").style.height = "100%";
+    maximized = true;
+  }
+  else {
+    document.getElementById("mywindow").style.width = "40vh";
+    document.getElementById("mywindow").style.height = "40vh";
+    maximized = false;
   }
 }
