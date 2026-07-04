@@ -41,10 +41,24 @@ a:hover {
   text-align: center;
   overflow: hidden;
   resize: both;
+  border-radius: 5px;
+  border-color: black;
 }
 
 .windowedge {
     display: flex;
+    justify-content: right;
+    background-color: blue;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+.windowtitle {
+    text-align: left;
+    font-family: "Geist Pixel";
+    color: white;
+    margin-right: auto;
+    padding-left: 10px;
 }
 
 .tabbutton {
@@ -56,4 +70,27 @@ body {
     margin: 0px 0px 0px 0px;
     overflow-x: hidden;
     overflow-y: hidden;
+}
+
+#aboutpage {
+    display: flex;
+    font-size: 19px;
+    justify-content: center;
+    align-items: center;
+}
+
+#aboutphoto {
+    padding: 30px;
+}
+
+#abouttext {
+    padding: 20px;
+    padding-right: 60px;
+    width: 370px;
+    top: 40px;
+    left: 50px;
+}
+
+#crustyme {
+    max-width: 40vh;
 }
