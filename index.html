@@ -53,21 +53,21 @@
              <div class="windowcontent" id="musicpage">
                 <div id="tracklist">
                     <p>Claude Debussy - Clair de Lune</p>
-                    <p id="bach" onclick='musicPlayer("music/bach.mp3")'>ULTRAKILL - Bach BWV 639 I call to you, Lord Jesus Christ</p>
-                    <p>NieR:Automata - Kainé Salvation</p>
+                    <p id="bach" onclick='musicPlayer("music/bach.mp3", "images/bach.png", "ULTRAKILL - Bach BWV 639 I call to you, Lord Jesus Christ")'>ULTRAKILL - Bach BWV 639 I call to you, Lord Jesus Christ</p>
+                    <p id="kaine(vocals)" onclick='musicPlayer("music/kaine(vocals).mp3", "images/nierr.jpg", "NieR:Replicant - Kainé Salvation")'>NieR:Replicant - Kainé Salvation</p>
                     <p>NieR:Automata - Vague Hope (Cold Rain)</p>
                     <p>NieR:Replicant - Song of the Ancients (Devola ver.)</p>
-                    <p>Xenoblade Chronicles: Definitive Edition - Valak Mountain</p>
+                    <p id="valak" onclick='musicPlayer("music/valak.mp3", "images/xenoblade1.png", "Xenoblade Chronicles: Definitive Edition - Valak Mountain (Night)")'>Xenoblade Chronicles: Definitive Edition - Valak Mountain (Night)</p>
                     <p>Xenoblade Chronicles 2 - Tantal (Night)</p>
                     <p>Xenoblade Chronicles 2: Torna - Auresco, Royal Capital (Night)</p>
                     <p>Shin Megami Tensei: Devil Survivor - Sunset</p>
-                    <p>Persona 4 - Signs of Love</p>
                     <p>Final Fantasy VII - Anxiety</p>
                     <p>Pokemon Black and White - Dragonspiral Tower</p>
-                    <p>Fire Emblem Echoes: Shadows of Valentia - Truth</p>
                     <p>Fire Emblem: Three Houses - Scales of the Goddess</p>
                 </div>
                 <div id="musictext">
+                    <div id="albumcover"><img id="albumcoverimg" src=""></div>
+                    <p id="songname">Select a track from the list to load it in the music player!</p>
                     <audio controls id="audiocontrols">
                         <source id="musiccontrols" src="" type="audio/mpeg">
                         Your browser does not support the audio element.

@@ -109,11 +109,14 @@ function resizeTab(id) {
 
 // MUSIC PLAYER TIME!!!!!
 
-function musicPlayer(id){
-  let source = document.getElementById("musiccontrols")
-  let audio = document.getElementById("audiocontrols")
+function musicPlayer(id, img, title){
+  let source = document.getElementById("musiccontrols");
+  let audio = document.getElementById("audiocontrols");
   source.src=id;
   // replace source with new path to audio file
-  audio.load()
+  audio.load();
   // load audio controls to be ready with new song
+  let albumimg = document.getElementById("albumcoverimg");
+  albumimg.src=img;
+  document.getElementById("songname").textContent=title;
 }
