@@ -12,11 +12,6 @@
 </head>
 <body>
 
-    
-             <audio controls>
-                <source src="music/Bach_ BWV 639 I call to you, Lord Jesus Christ - ULTRAKILL Soundtrack.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
 
     <div>
 
@@ -47,6 +42,40 @@
              </div>
         </div>
 
+        <div class="window" id="musicwindow">
+            <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+             <div class="windowedge" id="musicwindowedge">
+                <div class="windowtitle" id="musicwindowheader">Music Player</div>
+                <div class="min" id="minimize" onclick="resizeTab('musicwindow')"><img class="tabbutton" src="images/minimize_button.jpeg"></div>
+                <div class="exp" id="expand" onclick="resizeTab('musicwindow')"><img class="tabbutton" src="images/expand_button.jpeg"></div>
+                <div class="ex" id="exit" onclick="exitTab('musicwindow')"><img class="tabbutton" src="images/exit_button.jpeg"></div>
+             </div>
+             <div class="windowcontent" id="musicpage">
+                <div id="tracklist">
+                    <p>Claude Debussy - Clair de Lune</p>
+                    <p id="bach" onclick='musicPlayer("music/bach.mp3")'>ULTRAKILL - Bach BWV 639 I call to you, Lord Jesus Christ</p>
+                    <p>NieR:Automata - Kainé Salvation</p>
+                    <p>NieR:Automata - Vague Hope (Cold Rain)</p>
+                    <p>NieR:Replicant - Song of the Ancients (Devola ver.)</p>
+                    <p>Xenoblade Chronicles: Definitive Edition - Valak Mountain</p>
+                    <p>Xenoblade Chronicles 2 - Tantal (Night)</p>
+                    <p>Xenoblade Chronicles 2: Torna - Auresco, Royal Capital (Night)</p>
+                    <p>Shin Megami Tensei: Devil Survivor - Sunset</p>
+                    <p>Persona 4 - Signs of Love</p>
+                    <p>Final Fantasy VII - Anxiety</p>
+                    <p>Pokemon Black and White - Dragonspiral Tower</p>
+                    <p>Fire Emblem Echoes: Shadows of Valentia - Truth</p>
+                    <p>Fire Emblem: Three Houses - Scales of the Goddess</p>
+                </div>
+                <div id="musictext">
+                    <audio controls id="audiocontrols">
+                        <source id="musiccontrols" src="" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+             </div>
+        </div>
+
         <div class="appgroup">
             <div class="app" id="about">
                 <img class="icon" src="images/placeholder.jpg" onclick="openTab('aboutwindow')">
@@ -61,7 +90,7 @@
                 <h4 class="apptext">Projects</h4>
             </div>
             <div class="app" id="music">
-                <img class="icon" src="images/placeholder.jpg">
+                <img class="icon" src="images/placeholder.jpg" onclick="openTab('musicwindow')">
                 <h4 class="apptext">Music</h4>
             </div>
             <div class="app" id="thoughts">

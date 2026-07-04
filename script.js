@@ -1,5 +1,6 @@
 // Make the DIV element draggable:
 dragElement(document.getElementById("aboutwindow"));
+dragElement(document.getElementById("musicwindow"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -51,6 +52,7 @@ function dragElement(elmnt) {
 
 
 document.getElementById("aboutwindow").style.visibility = "hidden";
+document.getElementById("musicwindow").style.visibility = "hidden";
 
 function openTab(id) {
   document.getElementById(id).style.visibility = "visible";
@@ -94,4 +96,24 @@ function resizeTab(id) {
     // restore lists to original blank states
     maximized = false;
   }
+}
+
+
+
+
+
+
+
+
+
+
+// MUSIC PLAYER TIME!!!!!
+
+function musicPlayer(id){
+  let source = document.getElementById("musiccontrols")
+  let audio = document.getElementById("audiocontrols")
+  source.src=id;
+  // replace source with new path to audio file
+  audio.load()
+  // load audio controls to be ready with new song
 }

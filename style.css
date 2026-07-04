@@ -72,6 +72,11 @@ body {
     overflow-y: hidden;
 }
 
+#aboutwindow {
+    top: 90px;
+    left: 340px;
+}
+
 #aboutpage {
     display: flex;
     font-size: 19px;
@@ -87,10 +92,16 @@ body {
     padding: 20px;
     padding-right: 60px;
     width: 370px;
-    top: 40px;
-    left: 50px;
 }
 
 #crustyme {
     max-width: 40vh;
+}
+
+
+
+
+#musicwindow {
+    top: 40px;
+    left: 100px;
 }
