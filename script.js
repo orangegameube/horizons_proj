@@ -1,5 +1,5 @@
 // Make the DIV element draggable:
-dragElement(document.getElementById("mywindow"));
+dragElement(document.getElementById("aboutwindow"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -50,14 +50,14 @@ function dragElement(elmnt) {
 
 
 
-document.getElementById("mywindow").style.visibility = "hidden";
+document.getElementById("aboutwindow").style.visibility = "hidden";
 
-function openTab() {
-  document.getElementById("mywindow").style.visibility = "visible";
+function openTab(id) {
+  document.getElementById(id).style.visibility = "visible";
 }
 
-function exitTab() {
-  document.getElementById("mywindow").style.visibility = "hidden";
+function exitTab(id) {
+  document.getElementById(id).style.visibility = "hidden";
 }
 
 let maximized = false;

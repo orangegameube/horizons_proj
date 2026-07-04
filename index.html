@@ -12,21 +12,28 @@
 </head>
 <body>
 
+    
+             <audio controls>
+                <source src="music/Bach_ BWV 639 I call to you, Lord Jesus Christ - ULTRAKILL Soundtrack.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
     <div>
 
-        <div id="mywindow">
+        <div class="window" id="aboutwindow">
             <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
-             <div id="mywindowedge">
-                <div id="mywindowheader">Click here to move</div>
-                <button id="expand" onclick="resizeTab('mywindow')">Click here to expand</button>
-                <button id="exit" onclick="exitTab()">Click here to exit</button>
+             <div class="windowedge" id="aboutwindowedge">
+                <div id="aboutwindowheader">Click here to move</div>
+                <div class="min" id="minimize" onclick="resizeTab('aboutwindow')"><img class="tabbutton" src="images/minimize_button.jpeg"></div>
+                <div class="exp" id="expand" onclick="resizeTab('aboutwindow')"><img class="tabbutton" src="images/expand_button.jpeg"></div>
+                <div class="ex" id="exit" onclick="exitTab('aboutwindow')"><img class="tabbutton" src="images/exit_button.jpeg"></div>
              </div>
              <div id="window1">This is a window!</div>
         </div>
 
         <div class="appgroup">
             <div class="app" id="about">
-                <img class="icon" src="images/placeholder.jpg" onclick="openTab()">
+                <img class="icon" src="images/placeholder.jpg" onclick="openTab('aboutwindow')">
                 <h4 class="apptext">About</h4>
             </div>
             <div class="app" id="gallery">
