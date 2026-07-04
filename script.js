@@ -120,3 +120,11 @@ function musicPlayer(id, img, title){
   albumimg.src=img;
   document.getElementById("songname").textContent=title;
 }
+
+
+// oh god i forgot to bring windows to the front when clicked!!! using the z direction for this
+let newz = 10
+function raiseWindowZ(id) {
+  let window = document.getElementById(id);
+  window.style.zIndex = ++ newz;
+}

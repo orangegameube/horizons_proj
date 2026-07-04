@@ -34,8 +34,7 @@ a:hover {
 }
 
 .window {
-  position: absolute;
-    z-index: 9;
+    position: absolute;
     display: flex;
     flex-direction: column;
     background-color: #f1f1f1;
@@ -80,6 +79,8 @@ body {
 #aboutwindow {
     top: 90px;
     left: 340px;
+    justify-content: center;
+    text-align: center;
 }
 
 #aboutpage {
@@ -134,6 +135,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding: 30px;
     width: 300px;
     flex-shrink: 0;

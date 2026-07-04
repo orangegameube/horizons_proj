@@ -15,7 +15,7 @@
 
     <div>
 
-        <div class="window" id="aboutwindow">
+        <div class="window" id="aboutwindow" onclick="raiseWindowZ('aboutwindow')">
             <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
              <div class="windowedge" id="aboutwindowedge">
                 <div class="windowtitle" id="aboutwindowheader">About</div>
@@ -42,7 +42,7 @@
              </div>
         </div>
 
-        <div class="window" id="musicwindow">
+        <div class="window" id="musicwindow" onclick="raiseWindowZ('musicwindow')">
             <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
              <div class="windowedge" id="musicwindowedge">
                 <div class="windowtitle" id="musicwindowheader">Music Player</div>
@@ -52,18 +52,19 @@
              </div>
              <div class="windowcontent" id="musicpage">
                 <div id="tracklist">
-                    <p>Claude Debussy - Clair de Lune</p>
+                    <p id="clair" onclick='musicPlayer("music/clair.mp3", "images/bach.png", "Claude Debussy - Clair de Lune")'>Claude Debussy - Clair de Lune</p>
                     <p id="bach" onclick='musicPlayer("music/bach.mp3", "images/bach.png", "ULTRAKILL - Bach BWV 639 I call to you, Lord Jesus Christ")'>ULTRAKILL - Bach BWV 639 I call to you, Lord Jesus Christ</p>
                     <p id="kaine(vocals)" onclick='musicPlayer("music/kaine(vocals).mp3", "images/nierr.jpg", "NieR:Replicant - Kainé Salvation")'>NieR:Replicant - Kainé Salvation</p>
-                    <p>NieR:Automata - Vague Hope (Cold Rain)</p>
-                    <p>NieR:Replicant - Song of the Ancients (Devola ver.)</p>
+                    <p id="anx" onclick='musicPlayer("music/village.mp3", "images/nierr.jpg", "NieR:Replicant - Village Theme")'>NieR:Replicant - Village Theme</p>
+                    <p id="vaguehope" onclick='musicPlayer("music/vaguehope.mp3", "images/niera.jpg", "NieR:Automata - Vague Hope (Cold Rain)")'>NieR:Automata - Vague Hope (Cold Rain)</p>
+                    <p id="title" onclick='musicPlayer("music/title.mp3", "images/xenoblade1.png", "Xenoblade Chronicles: Definitive Edition - Title Theme")'>Xenoblade Chronicles: Definitive Edition - Title Theme</p>
                     <p id="valak" onclick='musicPlayer("music/valak.mp3", "images/xenoblade1.png", "Xenoblade Chronicles: Definitive Edition - Valak Mountain (Night)")'>Xenoblade Chronicles: Definitive Edition - Valak Mountain (Night)</p>
-                    <p>Xenoblade Chronicles 2 - Tantal (Night)</p>
-                    <p>Xenoblade Chronicles 2: Torna - Auresco, Royal Capital (Night)</p>
-                    <p>Shin Megami Tensei: Devil Survivor - Sunset</p>
-                    <p>Final Fantasy VII - Anxiety</p>
-                    <p>Pokemon Black and White - Dragonspiral Tower</p>
-                    <p>Fire Emblem: Three Houses - Scales of the Goddess</p>
+                    <p id="title2" onclick='musicPlayer("music/title2.mp3", "images/xb2.jpg", "Xenoblade Chronicles 2 - Title Theme")'>Xenoblade Chronicles 2 - Title Theme</p>
+                    <p id="tantal" onclick='musicPlayer("music/tantal.mp3", "images/xb2.jpg", "Xenoblade Chronicles 2 - Tantal (Night)")'>Xenoblade Chronicles 2 - Tantal (Night)</p>
+                    <p id="anx" onclick='musicPlayer("music/auresco.mp3", "images/torna.jpg", "Xenoblade Chronicles 2: Torna - Auresco, Royal Capital (Night)")'>Xenoblade Chronicles 2: Torna - Auresco, Royal Capital (Night)</p>
+                    <p id="desu" onclick='musicPlayer("music/sunset.mp3", "images/desu.png", "Shin Megami Tensei: Devil Survivor - Sunset")'>Shin Megami Tensei: Devil Survivor - Sunset</p>
+                    <p id="anx" onclick='musicPlayer("music/anx.mp3", "images/ff7.jpg", "Final Fantasy VII - Anxiety")'>Final Fantasy VII - Anxiety</p>
+                    <p id="scales" onclick='musicPlayer("music/scales.mp3", "images/three.jpg", "Fire Emblem: Three Houses - Scales of the Goddess")'>Fire Emblem: Three Houses - Scales of the Goddess</p>
                 </div>
                 <div id="musictext">
                     <div id="albumcover"><img id="albumcoverimg" src=""></div>
