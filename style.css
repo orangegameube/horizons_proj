@@ -203,6 +203,17 @@ body {
     height: 20px;
 }
 
-#play {
-    background-color: pink;
+.controls {
+    display: flex;
+}
+
+.btnimg {
+    height: 30px;
+}
+
+#timekeeper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }

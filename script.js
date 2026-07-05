@@ -119,12 +119,16 @@ function musicPlayer(id, img, title){
   let albumimg = document.getElementById("albumcoverimg");
   albumimg.src=img;
   document.getElementById("songname").textContent=title;
+  btnimg.src="images/playbtn.png";
+  isPlaying = false;
 }
 
 // functionality for custom audio controls
-let progressbar = document.getElementById("progressbar");
+let progbar = document.getElementById("progressbar");
 let audio = document.getElementById("audiocontrols");
-let playbtn = document.getElementById("play");
+let btnimg = document.getElementById("btnimg");
+let currTime = document.getElementById('time');
+let totalTime = document.getElementById('totaltime');
 
 let isPlaying = false;
 
@@ -135,14 +139,63 @@ function togglePlay() {
 function playTrack() {
   audio.play();
   isPlaying = true;
-  //playbtnimg.src="img";
+  btnimg.src="images/pausebtn.png";
 }
 
 function pauseTrack() {
   audio.pause();
   isPlaying = false;
+  btnimg.src="images/playbtn.png";
 }
 
+function updateProgBar() {
+  let seekPosition = 0;
+  if (!isNaN(audio.duration)) {
+    seekPosition = audio.currentTime * (100 / audio.duration);
+    progbar.value = seekPosition;
+
+    let minutes = Math.floor(audio.currentTime / 60);
+    let seconds = Math.floor(audio.currentTime - minutes * 60);
+    let totalMins = Math.floor(audio.duration / 60);
+    let totalSecs = Math.floor(audio.duration - totalMins * 60);
+
+    if(seconds < 10) {seconds = "0" + seconds; }
+    if(minutes < 10) {minutes = "0" + minutes; }
+    if(totalSecs < 10) {totalSecs = "0" + totalSecs; }
+    if(totalMins < 10) {totalMins = "0" + totalMins; }
+
+    currTime.textContent = minutes + ":" + seconds;
+    totalTime.textContent = totalMins + ":" + totalSecs;
+  }
+}
+
+audio.addEventListener("timeupdate", updateProgBar);
+// when current time in audio updates, update progress bar
+// update progress bar value itself (where the slider is) with current time value
+
+//
+//
+//
+// I AI GENERATED THIS SNIPPET USING CHATGPT BECAUSE I COULD NOT FIND A SOLUTION ONLINE
+// the problem was that when seeking using the progress bar, the audio would "fight back" and result in prog bar changes 
+// that weren't what the user wanted (skip to 1 min, it actually goes to like 45 sec)
+audio.addEventListener("loadedmetadata", () => {
+    progbar.max = audio.duration;
+    // sets progress bar maximum to the song's maximum time upon loading song metadata
+});
+
+audio.addEventListener("timeupdate", () => {
+    progbar.value = audio.currentTime;
+    // current time in audio updates with every change in progress bar, so the fighting doesnt happen, as the updates simultaneously happen
+});
+
+progbar.addEventListener("input", () => {
+    audio.currentTime = progbar.value;
+    // the input event activates with every change in the slider, allowing for users to change the time
+});
+// END OF AI GENERATED SEGMENT
+//
+//
 
 // oh god i forgot to bring windows to the front when clicked!!! using the z direction for this
 let newz = 10
