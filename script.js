@@ -108,7 +108,7 @@ function resizeTab(id) {
 
 
 // MUSIC PLAYER TIME!!!!!
-
+// make the music player deets load
 function musicPlayer(id, img, title){
   let source = document.getElementById("musiccontrols");
   let audio = document.getElementById("audiocontrols");
@@ -119,6 +119,28 @@ function musicPlayer(id, img, title){
   let albumimg = document.getElementById("albumcoverimg");
   albumimg.src=img;
   document.getElementById("songname").textContent=title;
+}
+
+// functionality for custom audio controls
+let progressbar = document.getElementById("progressbar");
+let audio = document.getElementById("audiocontrols");
+let playbtn = document.getElementById("play");
+
+let isPlaying = false;
+
+function togglePlay() {
+  isPlaying ? pauseTrack() : playTrack();
+}
+
+function playTrack() {
+  audio.play();
+  isPlaying = true;
+  //playbtnimg.src="img";
+}
+
+function pauseTrack() {
+  audio.pause();
+  isPlaying = false;
 }
 
 

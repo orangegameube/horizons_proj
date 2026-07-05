@@ -52,27 +52,35 @@
              </div>
              <div class="windowcontent" id="musicpage">
                 <div id="tracklist">
-                    <p id="clair" onclick='musicPlayer("music/clair.mp3", "images/bach.png", "Claude Debussy - Clair de Lune")'>Claude Debussy - Clair de Lune</p>
-                    <p id="bach" onclick='musicPlayer("music/bach.mp3", "images/bach.png", "ULTRAKILL - Bach BWV 639 I call to you, Lord Jesus Christ")'>ULTRAKILL - Bach BWV 639 I call to you, Lord Jesus Christ</p>
-                    <p id="kaine(vocals)" onclick='musicPlayer("music/kaine(vocals).mp3", "images/nierr.jpg", "NieR:Replicant - Kainé Salvation")'>NieR:Replicant - Kainé Salvation</p>
-                    <p id="anx" onclick='musicPlayer("music/village.mp3", "images/nierr.jpg", "NieR:Replicant - Village Theme")'>NieR:Replicant - Village Theme</p>
-                    <p id="vaguehope" onclick='musicPlayer("music/vaguehope.mp3", "images/niera.jpg", "NieR:Automata - Vague Hope (Cold Rain)")'>NieR:Automata - Vague Hope (Cold Rain)</p>
-                    <p id="title" onclick='musicPlayer("music/title.mp3", "images/xenoblade1.png", "Xenoblade Chronicles: Definitive Edition - Title Theme")'>Xenoblade Chronicles: Definitive Edition - Title Theme</p>
-                    <p id="valak" onclick='musicPlayer("music/valak.mp3", "images/xenoblade1.png", "Xenoblade Chronicles: Definitive Edition - Valak Mountain (Night)")'>Xenoblade Chronicles: Definitive Edition - Valak Mountain (Night)</p>
-                    <p id="title2" onclick='musicPlayer("music/title2.mp3", "images/xb2.jpg", "Xenoblade Chronicles 2 - Title Theme")'>Xenoblade Chronicles 2 - Title Theme</p>
-                    <p id="tantal" onclick='musicPlayer("music/tantal.mp3", "images/xb2.jpg", "Xenoblade Chronicles 2 - Tantal (Night)")'>Xenoblade Chronicles 2 - Tantal (Night)</p>
-                    <p id="anx" onclick='musicPlayer("music/auresco.mp3", "images/torna.jpg", "Xenoblade Chronicles 2: Torna - Auresco, Royal Capital (Night)")'>Xenoblade Chronicles 2: Torna - Auresco, Royal Capital (Night)</p>
-                    <p id="desu" onclick='musicPlayer("music/sunset.mp3", "images/desu.png", "Shin Megami Tensei: Devil Survivor - Sunset")'>Shin Megami Tensei: Devil Survivor - Sunset</p>
-                    <p id="anx" onclick='musicPlayer("music/anx.mp3", "images/ff7.jpg", "Final Fantasy VII - Anxiety")'>Final Fantasy VII - Anxiety</p>
-                    <p id="scales" onclick='musicPlayer("music/scales.mp3", "images/three.jpg", "Fire Emblem: Three Houses - Scales of the Goddess")'>Fire Emblem: Three Houses - Scales of the Goddess</p>
+                    <p id="clair" class="song" onclick='musicPlayer("music/clair.mp3", "images/bach.png", "Claude Debussy - Clair de Lune")'>Claude Debussy - Clair de Lune</p>
+                    <p id="bach" class="song" onclick='musicPlayer("music/bach.mp3", "images/bach.png", "ULTRAKILL - Bach BWV 639 I call to you, Lord Jesus Christ")'>ULTRAKILL - Bach BWV 639 I call to you, Lord Jesus Christ</p>
+                    <p id="kaine(vocals)" class="song" onclick='musicPlayer("music/kaine(vocals).mp3", "images/nierr.jpg", "NieR:Replicant - Kainé Salvation")'>NieR:Replicant - Kainé Salvation</p>
+                    <p id="nierr" class="song" onclick='musicPlayer("music/village.mp3", "images/nierr.jpg", "NieR:Replicant - Village Theme")'>NieR:Replicant - Village Theme</p>
+                    <p id="vaguehope" class="song" onclick='musicPlayer("music/vaguehope.mp3", "images/niera.jpg", "NieR:Automata - Vague Hope (Cold Rain)")'>NieR:Automata - Vague Hope (Cold Rain)</p>
+                    <p id="title" class="song" onclick='musicPlayer("music/title.mp3", "images/xenoblade1.png", "Xenoblade Chronicles: Definitive Edition - Title Theme")'>Xenoblade Chronicles: Definitive Edition - Title Theme</p>
+                    <p id="valak" class="song" onclick='musicPlayer("music/valak.mp3", "images/xenoblade1.png", "Xenoblade Chronicles: Definitive Edition - Valak Mountain (Night)")'>Xenoblade Chronicles: Definitive Edition - Valak Mountain (Night)</p>
+                    <p id="title2" class="song" onclick='musicPlayer("music/title2.mp3", "images/xb2.jpg", "Xenoblade Chronicles 2 - Title Theme")'>Xenoblade Chronicles 2 - Title Theme</p>
+                    <p id="tantal" class="song" onclick='musicPlayer("music/tantal.mp3", "images/xb2.jpg", "Xenoblade Chronicles 2 - Tantal (Night)")'>Xenoblade Chronicles 2 - Tantal (Night)</p>
+                    <p id="anx" class="song" onclick='musicPlayer("music/auresco.mp3", "images/torna.jpg", "Xenoblade Chronicles 2: Torna - Auresco, Royal Capital (Night)")'>Xenoblade Chronicles 2: Torna - Auresco, Royal Capital (Night)</p>
+                    <p id="desu" class="song" onclick='musicPlayer("music/sunset.mp3", "images/desu.png", "Shin Megami Tensei: Devil Survivor - Sunset")'>Shin Megami Tensei: Devil Survivor - Sunset</p>
+                    <p id="anx" class="song" onclick='musicPlayer("music/anx.mp3", "images/ff7.jpg", "Final Fantasy VII - Anxiety")'>Final Fantasy VII - Anxiety</p>
+                    <p id="scales" class="song" onclick='musicPlayer("music/scales.mp3", "images/three.jpg", "Fire Emblem: Three Houses - Scales of the Goddess")'>Fire Emblem: Three Houses - Scales of the Goddess</p>
                 </div>
                 <div id="musictext">
-                    <div id="albumcover"><img id="albumcoverimg" src=""></div>
-                    <p id="songname">Select a track from the list to load it in the music player!</p>
+                    <div id="infobox">
+                        <div id="albumcover"><img id="albumcoverimg" src=""></div>
+                        <p id="songname">Select a track from the list to load it in the music player!</p>
+                    </div>
                     <audio controls id="audiocontrols">
                         <source id="musiccontrols" src="" type="audio/mpeg">
                         Your browser does not support the audio element.
                     </audio>
+                    <input type="range" value="0" id="progressbar">
+                    <div class="controls">
+                        <div></div>
+                        <div id="play" onclick="togglePlay()"><img src=""></div>
+                        <div></div>
+                    </div>
                 </div>
              </div>
         </div>
