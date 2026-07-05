@@ -197,6 +197,45 @@ progbar.addEventListener("input", () => {
 //
 //
 
+function toggleLoop() {
+  if (document.getElementById('loopbox').checked) {
+    audio.loop = true;
+  }
+  else {
+    audio.loop = false;
+  }
+}
+// toggles loop switch
+
+/*/
+const musicInfo = [["music/clair.mp3", "images/bach.png", "Claude Debussy - Clair de Lune"], ["bach"], ["kaine(vocals)"], ["nierr"]]
+const musicIDs = ["clair", "bach", "kaine(vocals)"]
+
+let autoplay = false;
+function toggleAutoplay() {
+  if (document.getElementById('autobox').checked) {
+    autoplay = true;
+  }
+  else {
+    autoplay = false;
+  }
+}
+
+function autoplaySongs(currentSongPath) {
+  if (autoplay = true) {
+    console.log(musicInfo.indexOf(currentSongPath))
+    let currentIndex = musicInfo.indexOf(currentSongPath)
+    let currentSong = musicInfo[currentIndex]
+    musicPlayer(musicInfo[currentSong + 1][0], musicInfo[currentSong + 1][1], musicInfo[currentSong + 1][2])
+    currentSong++
+  }
+}
+
+audio.addEventListener("ended", autoplaySongs([document.getElementById("musiccontrols").src.replace("http://127.0.0.1:5500/", ""), 
+  document.getElementById("albumcoverimg").src.replace("http://127.0.0.1:5500/", ""), document.getElementById("songname").innerText]))
+/*/
+
+
 // oh god i forgot to bring windows to the front when clicked!!! using the z direction for this
 let newz = 10
 function raiseWindowZ(id) {

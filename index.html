@@ -61,7 +61,7 @@
                     <p id="valak" class="song" onclick='musicPlayer("music/valak.mp3", "images/xenoblade1.png", "Xenoblade Chronicles: Definitive Edition - Valak Mountain (Night)")'>Xenoblade Chronicles: Definitive Edition - Valak Mountain (Night)</p>
                     <p id="title2" class="song" onclick='musicPlayer("music/title2.mp3", "images/xb2.jpg", "Xenoblade Chronicles 2 - Title Theme")'>Xenoblade Chronicles 2 - Title Theme</p>
                     <p id="tantal" class="song" onclick='musicPlayer("music/tantal.mp3", "images/xb2.jpg", "Xenoblade Chronicles 2 - Tantal (Night)")'>Xenoblade Chronicles 2 - Tantal (Night)</p>
-                    <p id="anx" class="song" onclick='musicPlayer("music/auresco.mp3", "images/torna.jpg", "Xenoblade Chronicles 2: Torna - Auresco, Royal Capital (Night)")'>Xenoblade Chronicles 2: Torna - Auresco, Royal Capital (Night)</p>
+                    <p id="auresco" class="song" onclick='musicPlayer("music/auresco.mp3", "images/torna.jpg", "Xenoblade Chronicles 2: Torna - Auresco, Royal Capital (Night)")'>Xenoblade Chronicles 2: Torna - Auresco, Royal Capital (Night)</p>
                     <p id="desu" class="song" onclick='musicPlayer("music/sunset.mp3", "images/desu.png", "Shin Megami Tensei: Devil Survivor - Sunset")'>Shin Megami Tensei: Devil Survivor - Sunset</p>
                     <p id="anx" class="song" onclick='musicPlayer("music/anx.mp3", "images/ff7.jpg", "Final Fantasy VII - Anxiety")'>Final Fantasy VII - Anxiety</p>
                     <p id="scales" class="song" onclick='musicPlayer("music/scales.mp3", "images/three.jpg", "Fire Emblem: Three Houses - Scales of the Goddess")'>Fire Emblem: Three Houses - Scales of the Goddess</p>
@@ -81,9 +81,23 @@
                         <div id="totaltime">00:00</div>
                     </div>
                     <div class="controls">
+                        <div class="switchbox">
+                            <label class="switch" onclick="toggleAutoplay()">
+                                <input id="autobox" type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                            <p>Autoplay</p>
+                        </div>
                         <div id="back"><img class="btnimg" src="images/backone.png"></div>
                         <div id="play" onclick="togglePlay()"><img class="btnimg" id="btnimg" src="images/playbtn.png"></div>
                         <div id="fwd"><img class="btnimg" src="images/fwdone.png"></div>
+                        <div class="switchbox">
+                            <label class="switch" onclick="toggleLoop()">
+                                <input id="loopbox" type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                            <p>Loop</p>
+                        </div>
                     </div>
                 </div>
              </div>
