@@ -71,7 +71,7 @@
                         <div id="albumcover"><img id="albumcoverimg" src=""></div>
                         <p id="songname">Select a track from the list to load it in the music player!</p>
                     </div>
-                    <audio controls id="audiocontrols">
+                    <audio id="audiocontrols">
                         <source id="musiccontrols" src="" type="audio/mpeg">
                         Your browser does not support the audio element.
                     </audio>
@@ -103,6 +103,71 @@
              </div>
         </div>
 
+
+
+
+        <div class="window" id="thoughtswindow" onclick="raiseWindowZ('thoughtswindow')">
+            <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+             <div class="windowedge" id="thoughtswindowedge">
+                <div class="windowtitle" id="thoughtswindowheader">Thoughts</div>
+                <div class="min" id="minimize" onclick="resizeTab('thoughtswindow')"><img class="tabbutton" src="images/minimize_button.jpeg"></div>
+                <div class="exp" id="expand" onclick="resizeTab('thoughtswindow')"><img class="tabbutton" src="images/expand_button.jpeg"></div>
+                <div class="ex" id="exit" onclick="exitTab('thoughtswindow')"><img class="tabbutton" src="images/exit_button.jpeg"></div>
+             </div>
+             <div class="windowcontent" id="thoughtspage">
+                <div class="filecollection">
+                    <div class="fileline" onclick="expandFiles()">
+                        <img class="fileimg" src="images/file.png">
+                        <div class="fileinfo">Ultrakill</div>
+                    </div>
+                    <div class="subfile" onclick="openTab('ilovefraud')">
+                        <img class="fileimg" src="images/file.png">
+                        <div class="fileinfo">FRAUD WAS THE BEST GAMING EXPERIENCE OF MY LIFE</div>
+                    </div>
+                    <div class="subfile" onclick="openTab('hakitaglaze')">
+                        <img class="fileimg" src="images/file.png">
+                        <div class="fileinfo">In which I express my endless admiration for Hakita</div>
+                    </div>
+                    <div class="subfile" onclick="openTab('ultrarank')">
+                        <img class="fileimg" src="images/file.png">
+                        <div class="fileinfo">Ranking stuff is so much fun!</div>
+                    </div>
+                </div>
+
+                <div class="filecollection">
+                    <div class="fileline">
+                        <img class="fileimg" src="images/file.png">
+                        <div class="fileinfo" onclick="expandFiles()">Metal Gear Solid</div>
+                    </div>
+                    <div class="subfile">
+                        <img class="fileimg" src="images/file.png">
+                        <div class="fileinfo" onclick="openTab('talkingraiden')">My mixed thoughts on the twink death of Raiden</div>
+                    </div>
+                </div>
+                
+             </div>
+
+        </div>
+
+        <div class="window" id="ultrakillthoughts" onclick="raiseWindowZ('ultrakillthoughts')">
+            <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+             <div class="windowedge" id="ultrakillwindowedge">
+                <div class="windowtitle" id="ultrakillwindowheader">Thoughts</div>
+                <div class="min" id="minimize" onclick="resizeTab('ultrakillthoughts')"><img class="tabbutton" src="images/minimize_button.jpeg"></div>
+                <div class="exp" id="expand" onclick="resizeTab('ultrakillthoughts')"><img class="tabbutton" src="images/expand_button.jpeg"></div>
+                <div class="ex" id="exit" onclick="exitTab('ultrakillthoughts')"><img class="tabbutton" src="images/exit_button.jpeg"></div>
+             </div>
+             <div class="windowcontent" id="ultrakill">
+             </div>
+        </div>
+
+
+
+
+
+
+
+
         <div class="appgroup">
             <div class="app" id="about">
                 <img class="icon" src="images/placeholder.jpg" onclick="openTab('aboutwindow')">
@@ -121,7 +186,7 @@
                 <h4 class="apptext">Music</h4>
             </div>
             <div class="app" id="thoughts">
-                <img class="icon" src="images/placeholder.jpg">
+                <img class="icon" src="images/placeholder.jpg" onclick="openTab('thoughtswindow')">
                 <h4 class="apptext">Thoughts</h4>
             </div>
             <div class="app" id="blog">
