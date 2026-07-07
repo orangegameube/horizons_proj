@@ -62,8 +62,16 @@ function openTab(id) {
   document.getElementById(id).style.visibility = "visible";
 }
 
+let openFilesUK = false
+let openFilesMGS = false
+
 function exitTab(id) {
   document.getElementById(id).style.visibility = "hidden";
+  if (id = "thoughtswindow") {
+    closeFiles(fileList)
+    openFilesMGS = false;
+    openFilesUK = false;
+  }
 }
 
 let maximized = false;
@@ -245,3 +253,42 @@ function raiseWindowZ(id) {
   let window = document.getElementById(id);
   window.style.zIndex = ++ newz;
 }
+
+
+function expandFiles(idlist) {
+  for (const item of idlist) {
+    let subfile = document.getElementById(item);
+    subfile.style.display = "flex"; 
+  }
+}
+
+function closeFiles(idlist) {
+  for (const item of idlist) {
+    let subfile = document.getElementById(item);
+    subfile.style.display = "none"; 
+  }
+}
+
+function checkFilesUK(ids) {
+  if (openFilesUK === false) {
+    expandFiles(ids)
+    openFilesUK = true
+  }
+  else {
+    closeFiles(ids)
+    openFilesUK = false
+  }
+}
+
+function checkFilesMGS(ids) {
+  if (openFilesMGS === false) {
+    expandFiles(ids)
+    openFilesMGS = true
+  }
+  else {
+    closeFiles(ids)
+    openFilesMGS = false
+  }
+}
+
+const fileList = ['ilovefraud', 'hakitaglaze', 'ultrarank', 'talkingraiden'];

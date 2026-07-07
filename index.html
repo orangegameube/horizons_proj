@@ -115,33 +115,34 @@
                 <div class="ex" id="exit" onclick="exitTab('thoughtswindow')"><img class="tabbutton" src="images/exit_button.jpeg"></div>
              </div>
              <div class="windowcontent" id="thoughtspage">
+
                 <div class="filecollection">
-                    <div class="fileline" onclick="expandFiles()">
+                    <div class="fileline" onclick="checkFilesUK(['ilovefraud', 'hakitaglaze', 'ultrarank'])">
                         <img class="fileimg" src="images/file.png">
                         <div class="fileinfo">Ultrakill</div>
                     </div>
-                    <div class="subfile" onclick="openTab('ilovefraud')">
+                    <div class="subfile" id="ilovefraud" onclick="openTab('ilovefraud')">
                         <img class="fileimg" src="images/file.png">
                         <div class="fileinfo">FRAUD WAS THE BEST GAMING EXPERIENCE OF MY LIFE</div>
                     </div>
-                    <div class="subfile" onclick="openTab('hakitaglaze')">
+                    <div class="subfile" id="hakitaglaze" onclick="openTab('hakitaglaze')">
                         <img class="fileimg" src="images/file.png">
                         <div class="fileinfo">In which I express my endless admiration for Hakita</div>
                     </div>
-                    <div class="subfile" onclick="openTab('ultrarank')">
+                    <div class="subfile" id="ultrarank" onclick="openTab('ultrarank')">
                         <img class="fileimg" src="images/file.png">
                         <div class="fileinfo">Ranking stuff is so much fun!</div>
                     </div>
                 </div>
 
                 <div class="filecollection">
-                    <div class="fileline">
+                    <div class="fileline" onclick="checkFilesMGS(['talkingraiden'])">
                         <img class="fileimg" src="images/file.png">
-                        <div class="fileinfo" onclick="expandFiles()">Metal Gear Solid</div>
+                        <div class="fileinfo">Metal Gear Solid</div>
                     </div>
-                    <div class="subfile">
+                    <div class="subfile" id="talkingraiden" onclick="openTab('talkingraiden')">
                         <img class="fileimg" src="images/file.png">
-                        <div class="fileinfo" onclick="openTab('talkingraiden')">My mixed thoughts on the twink death of Raiden</div>
+                        <div class="fileinfo">On the twink death of Raiden, and my mixed thoughts on Rising</div>
                     </div>
                 </div>
                 
