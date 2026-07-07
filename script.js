@@ -2,7 +2,11 @@
 dragElement(document.getElementById("aboutwindow"));
 dragElement(document.getElementById("musicwindow"));
 dragElement(document.getElementById("thoughtswindow"));
-dragElement(document.getElementById("ultrakillthoughts"));
+dragElement(document.getElementById("ilovefraud"))
+dragElement(document.getElementById("hakitaglaze"))
+dragElement(document.getElementById("ultrarank"))
+dragElement(document.getElementById("talkingraiden"))
+
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -56,7 +60,10 @@ function dragElement(elmnt) {
 document.getElementById("aboutwindow").style.visibility = "hidden";
 document.getElementById("musicwindow").style.visibility = "hidden";
 document.getElementById("thoughtswindow").style.visibility = "hidden";
-document.getElementById("ultrakillthoughts").style.visibility = "hidden";
+document.getElementById("ilovefraud").style.visibility = "hidden";
+document.getElementById("hakitaglaze").style.visibility = "hidden";
+document.getElementById("ultrarank").style.visibility = "hidden";
+document.getElementById("talkingraiden").style.visibility = "hidden";
 
 function openTab(id) {
   document.getElementById(id).style.visibility = "visible";
@@ -291,4 +298,4 @@ function checkFilesMGS(ids) {
   }
 }
 
-const fileList = ['ilovefraud', 'hakitaglaze', 'ultrarank', 'talkingraiden'];
+const fileList = ['fileilovefraud', 'filehakitaglaze', 'fileultrarank', 'filetalkingraiden'];
