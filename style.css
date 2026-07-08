@@ -352,3 +352,32 @@ input:checked + .slider:before {
 .fileinfo {
     margin-right: 30px;
 }
+
+#ultrarank {
+    height: 100%;
+    width: 100%;
+}
+
+#ultrarankyap {
+    margin: 20px;
+    overflow-y: scroll;
+    font-family: "Geist Pixel";
+}
+
+.rankingitem {
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+    width: 90%;
+}
+
+.evimg {
+    width: 300px;
+}
+
+#tierlist {
+    width: 300px;
+}
