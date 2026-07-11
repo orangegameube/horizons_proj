@@ -463,6 +463,11 @@ h5 {
     width: 100%;
 }
 
+#funnies {
+    top: 100px;
+    left: 800px;
+}
+
 #funnycollection {
     font-family: "Geist Pixel";
     background-color: white;
@@ -489,4 +494,58 @@ h5 {
     align-items: center;
     justify-content: center;
     gap: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.flexitem {
+    text-align: center;
+    font-family: "geist pixel";
+}
+
+.gallerywindowcontent {
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+#ultraimages {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #dfdfdf;
+    border: 1px solid black;
+    border-radius: 7px;
+    resize: both;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+#mgsimages {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #dfdfdf;
+    border: 1px solid black;
+    border-radius: 7px;
+    resize: both;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+#dmcimages {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #dfdfdf;
+    border: 1px solid black;
+    border-radius: 7px;
+    resize: both;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
 }
