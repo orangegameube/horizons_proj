@@ -6,6 +6,10 @@ dragElement(document.getElementById("ilovefraud"))
 dragElement(document.getElementById("hakitaglaze"))
 dragElement(document.getElementById("ultrarank"))
 dragElement(document.getElementById("talkingraiden"))
+dragElement(document.getElementById("funnies"))
+dragElement(document.getElementById("ultraimages"))
+dragElement(document.getElementById("mgsimages"))
+dragElement(document.getElementById("dmcimages"))
 
 
 function dragElement(elmnt) {
@@ -64,6 +68,10 @@ document.getElementById("ilovefraud").style.visibility = "hidden";
 document.getElementById("hakitaglaze").style.visibility = "hidden";
 document.getElementById("ultrarank").style.visibility = "hidden";
 document.getElementById("talkingraiden").style.visibility = "hidden";
+document.getElementById("funnies").style.visibility = "hidden";
+document.getElementById("ultraimages").style.visibility = "hidden";
+document.getElementById("mgsimages").style.visibility = "hidden";
+document.getElementById("dmcimages").style.visibility = "hidden";
 
 function openTab(id) {
   document.getElementById(id).style.visibility = "visible";
