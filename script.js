@@ -10,6 +10,9 @@ dragElement(document.getElementById("funnies"))
 dragElement(document.getElementById("ultraimages"))
 dragElement(document.getElementById("mgsimages"))
 dragElement(document.getElementById("dmcimages"))
+dragElement(document.getElementById("galleryapp"))
+dragElement(document.getElementById("yspa"))
+dragElement(document.getElementById("blogwindow"))
 
 
 function dragElement(elmnt) {
@@ -72,6 +75,9 @@ document.getElementById("funnies").style.visibility = "hidden";
 document.getElementById("ultraimages").style.visibility = "hidden";
 document.getElementById("mgsimages").style.visibility = "hidden";
 document.getElementById("dmcimages").style.visibility = "hidden";
+document.getElementById("galleryapp").style.visibility = "hidden";
+document.getElementById("yspa").style.visibility = "hidden";
+document.getElementById("blogwindow").style.visibility = "hidden";
 
 function openTab(id) {
   document.getElementById(id).style.visibility = "visible";

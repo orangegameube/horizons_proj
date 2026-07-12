@@ -506,9 +506,16 @@ h5 {
 .gallerywindowcontent {
     flex: 1;
     min-height: 0;
-    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     overflow-x: scroll;
     overflow-y: scroll;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
 #ultraimages {
@@ -538,6 +545,37 @@ h5 {
 }
 
 #dmcimages {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #dfdfdf;
+    border: 1px solid black;
+    border-radius: 7px;
+    resize: both;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+#irlphotogallery {
+    font-family: "Geist Pixel";
+    background-color: white;
+    border-color: gray;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    margin: 30px;
+    padding: 30px;
+}
+
+.galleryimglandscape {
+    width: 700px;
+}
+.galleryimgportrait {
+    height: 700px;
+}
+
+#yspaphotos {
     position: absolute;
     display: flex;
     flex-direction: column;
