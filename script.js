@@ -15,6 +15,9 @@ dragElement(document.getElementById("yspa"))
 dragElement(document.getElementById("has"))
 dragElement(document.getElementById("flying"))
 dragElement(document.getElementById("cpw"))
+dragElement(document.getElementById("robotics"))
+dragElement(document.getElementById("senior"))
+dragElement(document.getElementById("electrathon"))
 dragElement(document.getElementById("blogwindow"))
 
 
@@ -83,6 +86,9 @@ document.getElementById("yspa").style.visibility = "hidden";
 document.getElementById("has").style.visibility = "hidden";
 document.getElementById("flying").style.visibility = "hidden";
 document.getElementById("cpw").style.visibility = "hidden";
+document.getElementById("robotics").style.visibility = "hidden";
+document.getElementById("senior").style.visibility = "hidden";
+document.getElementById("electrathon").style.visibility = "hidden";
 document.getElementById("blogwindow").style.visibility = "hidden";
 
 function openTab(id) {

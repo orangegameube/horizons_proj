@@ -627,6 +627,19 @@ h5 {
     width: 100vw;
 }
 
+#robotics {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #dfdfdf;
+    border: 1px solid black;
+    border-radius: 7px;
+    resize: both;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
 .gallerylayout {
     flex: 1;
     min-height: 0;
