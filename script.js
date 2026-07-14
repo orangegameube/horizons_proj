@@ -18,6 +18,7 @@ dragElement(document.getElementById("cpw"))
 dragElement(document.getElementById("robotics"))
 dragElement(document.getElementById("senior"))
 dragElement(document.getElementById("electrathon"))
+dragElement(document.getElementById("inspire"))
 dragElement(document.getElementById("blogwindow"))
 
 
@@ -89,6 +90,7 @@ document.getElementById("cpw").style.visibility = "hidden";
 document.getElementById("robotics").style.visibility = "hidden";
 document.getElementById("senior").style.visibility = "hidden";
 document.getElementById("electrathon").style.visibility = "hidden";
+document.getElementById("inspire").style.visibility = "hidden";
 document.getElementById("blogwindow").style.visibility = "hidden";
 
 function openTab(id) {
