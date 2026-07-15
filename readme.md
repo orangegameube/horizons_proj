@@ -15,6 +15,9 @@ GIVE IT LIKE 2 MINUTES TO LOAD. THIS IS BECAUSE THERE IS A TON OF MEDIA STORED O
 - Made the progress bar on audio work by breaking down the minutes and seconds and updating the inner html content of the progress bar based on this information whenever the function was called. It was called each time the audio's time would update.
 - Changing music and immediately getting a different image and title is caused by using a function that takes an input of the image and audio sources + title text and loads audio + changes image src + text innerhtml on the click of the new song.
 
+### AI Usage
+Upon not being able to find any documentation on the music progress bar "fighting against" being dragged online, I used ChatGPT to make sure that the value of the progress bar updated with the audio updating. I explained the code that was generated in the comments (line by line, which is 3 total short functions btw) of the code snippet, which you can find in script.js lines 232-251.
+
 ### Motivation
 Back in March of this year (2026), I pulled my phone out of my backpack afterschool to discover a mess of faded red and yellow lines and a massive back splotch on its screen. Somehow, my phone's already damaged screen cracked in such a particular way that I couldn't see what was on it at all, and I'd have to connect to it through my laptop to even use it. However, I couldn't access my photo gallery, so I lost 4 years' worth of memories that I often looked back on. I made this website so that I at least had a way to access my photos in a fun way (if I couldn't access them somehow in the future), but also just because 1. i wanted to try a project that looked retro type cool and 2. i wanted to make a mock up operating system.
 
