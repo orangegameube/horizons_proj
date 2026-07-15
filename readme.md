@@ -1,3 +1,22 @@
-Demo readme, just talking about what this project does n allat
+# My WebOS
+This project was made for Hack Club's Horizons program. It acts as a web-based "operating system" where you can use multiple applications and simulate a desktop experience (except it's MY desktop lol).
+<img width="1548" height="971" alt="image" src="https://github.com/user-attachments/assets/476317ad-ec26-4806-9715-211e3c023813" />
+<img width="1918" height="977" alt="image" src="https://github.com/user-attachments/assets/a0d9dc3d-b599-4bcb-a7f7-7ca85879ee72" />
 
-this project will act as a blog for me to share updates and memories about my life, as well as just things that i enjoy. i plan to keep it relatively hidden so that it can act as a digital diary of sorts for my friends and I to reflect on our journey together.
+
+### Tech Stack
+I made this project entirely using vanilla HTML, CSS, and JavaScript in VSCode. 
+
+### How It Works
+GIVE IT LIKE 2 MINUTES TO LOAD. THIS IS BECAUSE THERE IS A TON OF MEDIA STORED ON THIS PAGE. GO MAKE LIKE A SANDWICH IN THE MEANTIME OR SOMETHING. Once loaded, treat it like your desktop's own homepage. To open an application, click its app icon once. When a window opens, you can use the minimize or expand buttons to make the window fullscreen, or hit the exit button to close the window. Drag the bottom right corner of a window to resize the window. Drag the top bar of a window (the bar with the title and buttons) to move the window.
+- The top part of each window (where the title and buttons are) functions separately from the whole window, but moves with it. I had to store the current position of the tab, as well as the window to ensure that the window would revert to the last position AND SIZE it was given after it was expanded, instead of staying massive and unmanageable offscreen
+- In order to make the tabs resizable, I had to enable the option in CSS manually.
+- For the files that open subsections, I made separate functions that checked whether or not the parent had been clicked and if it had, only the specific parent's children (in varying number) would reveal themselves.
+- Made the progress bar on audio work by breaking down the minutes and seconds and updating the inner html content of the progress bar based on this information whenever the function was called. It was called each time the audio's time would update.
+- Changing music and immediately getting a different image and title is caused by using a function that takes an input of the image and audio sources + title text and loads audio + changes image src + text innerhtml on the click of the new song.
+
+### Motivation
+Back in March of this year (2026), I pulled my phone out of my backpack afterschool to discover a mess of faded red and yellow lines and a massive back splotch on its screen. Somehow, my phone's already damaged screen cracked in such a particular way that I couldn't see what was on it at all, and I'd have to connect to it through my laptop to even use it. However, I couldn't access my photo gallery, so I lost 4 years' worth of memories that I often looked back on. I made this website so that I at least had a way to access my photos in a fun way (if I couldn't access them somehow in the future), but also just because 1. i wanted to try a project that looked retro type cool and 2. i wanted to make a mock up operating system.
+
+### Thoughts
+The challenge I had for myself was to not use any online tutorials for the specific components I was making (especially since I couldn't find any for making an in-browser fake OS in the first place) and to instead rely on information available in docs and public forums. I would like to keep this project open-access in the future but with a lot fewer personal info just so that others could have a better idea of how to do a project like this (especially since most accessible versions include like no tutorials and dont just use vanilla webdev stuff). I think in all that I learned a lot about troubleshooting and programming strategies in general through consulting documentation, stack overflow, etc. first before looking up established tutorials for things. Overall, I didn't accomplish as much as I set out to do (minimize to taskbar became impossible with the implications of controlling tabs of the same application, and the autoplay/skip song in the music player had a similar scenario where I would have had to redo my code structure entirely AND solve another actual new problem to get it working). I think I definitely accomplished what I set out to do concerning the styling and applications, and I'm pretty proud of how it resembles the old windows aesthetic. I really don't want to work on this project for a couple months because i am BURNT OUT.
