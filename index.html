@@ -32,9 +32,9 @@
                     <p>Hey there!</p>
                     <p>It's Rory, that one person you know from Texas who's really into STEM (space specifically), hangouts with friends,
                         character analysis, being outdoors, yapping, and the hit video game ULTRAKILL (go play the demo!!!)
-                        I made this page so that I could digitally scrapbook the amazing time I've spent with you all, 
-                        as I don't really like social media platforms much as a way to share such fond memories.
-                        Plus, it also gives me full control over the medium i use, aesthetic of the page, and fun little quirks i add!
+                        I made this page so that I could digitally scrapbook the amazing time I've spent with you all, as when my phone 
+                        broke a couple months ago, I lost all of my photos and had to beg you guys to send them over to me again. 
+                        Plus, I get full control over the medium i use, aesthetic of the page, and fun little quirks i add!
                         This page will forever be a work in progress, and i hope to add more fun things to it in the future!
                         In the meantime, enjoy all of the things this page has to offer :]</p>
                     <p>- Rory</p>
@@ -1988,14 +1988,70 @@
         <div class="window" id="blogwindow" onclick="raiseWindowZ('blogwindow')">
             <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
              <div class="windowedge" id="blogwindowedge">
-                <div class="windowtitle" id="galleryappheader">Screenshots</div>
+                <div class="windowtitle" id="galleryappheader">Blog</div>
                 <div class="min" id="minimize" onclick="resizeTab('blogwindow')"><img class="tabbutton" src="images/minimize_button.jpeg"></div>
                 <div class="exp" id="expand" onclick="resizeTab('blogwindow')"><img class="tabbutton" src="images/expand_button.jpeg"></div>
                 <div class="ex" id="exit" onclick="exitTab('blogwindow')"><img class="tabbutton" src="images/exit_button.jpeg"></div>
              </div>
              <div class="blogwindowcontent" id="blogwindowcontentid">
-                <p>hey guys. i think i found a glue.</p>
+                <div class="filecollection">
+                    <div class="fileline" onclick="openTab('yspaBlog')">
+                        <img class="fileimg" src="images/file.png">
+                        <div class="fileinfo">Summer 2025</div>
+                    </div>
+                </div>
+                <div class="filecollection">
+                    <div class="fileline" onclick="checkFilessum26(['filesummer1'])">
+                        <img class="fileimg" src="images/file.png">
+                        <div class="fileinfo">Summer 2026</div>
+                    </div>
+                    <div class="subfile" id="filesummer1" onclick="openTab('summer1')">
+                        <img class="fileimg" src="images/file.png">
+                        <div class="fileinfo">The Fall of Icarus</div>
+                    </div>
+                </div>
              </div>
+        </div>
+
+
+
+        <div class="window" id="yspaBlog" onclick="raiseWindowZ('yspaBlog')">
+            <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+             <div class="windowedge" id="yspaBlogedge">
+                <div class="windowtitle" id="galleryappheader">YSPA 2025</div>
+                <div class="min" id="minimize" onclick="resizeTab('yspaBlog')"><img class="tabbutton" src="images/minimize_button.jpeg"></div>
+                <div class="exp" id="expand" onclick="resizeTab('yspaBlog')"><img class="tabbutton" src="images/expand_button.jpeg"></div>
+                <div class="ex" id="exit" onclick="exitTab('yspaBlog')"><img class="tabbutton" src="images/exit_button.jpeg"></div>
+            </div>
+            <div class="blogwindowcontent" id="yspablogcontent">
+                <p>As you can probably tell from the YSPA photo gallery, YSPA was one of the best experiences I've had 
+                    in my life, and I'm incredibly grateful that I got to meet the amazing friends I still talk to today! 
+                    You can read my blog entry by clicking the link below:
+                </p>
+                <a href="https://yspablog.wordpress.com/2025/07/29/07-27-2025-rory-sorola/">https://yspablog.wordpress.com/2025/07/29/07-27-2025-rory-sorola/</a>
+            </div>
+        </div>
+
+
+
+        <div class="window" id="summer1" onclick="raiseWindowZ('summer1')">
+            <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+             <div class="windowedge" id="summer1edge">
+                <div class="windowtitle" id="galleryappheader">My swift decline after the beginning of my internship</div>
+                <div class="min" id="minimize" onclick="resizeTab('summer1')"><img class="tabbutton" src="images/minimize_button.jpeg"></div>
+                <div class="exp" id="expand" onclick="resizeTab('summer1')"><img class="tabbutton" src="images/expand_button.jpeg"></div>
+                <div class="ex" id="exit" onclick="exitTab('summer1')"><img class="tabbutton" src="images/exit_button.jpeg"></div>
+            </div>
+            <div class="blogwindowcontent" id="sum1blogcontent">
+                <p>This is me saying I'm tired of my internship. I understand that I received a high-school level 
+                    position, but compared to all of the other ways I've spent my summer, this is easily the lamest 
+                    summer I've had. The start was freaking AWESOME: I got to go to lots of grad parties, take Joss 
+                    and Jules around everywhere we wanted to go, and even got to attend Inspire Momentum 2026 and made 
+                    tons of friends! In comparison, sitting at a desk all day making labels and burning my lungs with 
+                    IPA is so lame! Now that Maddie is visiting through YES, things are a lot more bearable since I can 
+                    see her through lunch. Just gotta power through 2 more weeks to get to the REAL fun of summer...
+                </p>
+            </div>
         </div>
 
 
@@ -2003,27 +2059,27 @@
 
         <div class="appgroup">
             <div class="app" id="about">
-                <img class="icon" src="images/placeholder.jpg" onclick="openTab('aboutwindow')">
+                <img class="icon" src="images/about.png" onclick="openTab('aboutwindow')">
                 <h4 class="apptext">About</h4>
             </div>
             <div class="app" id="gallery">
-                <img class="icon" src="images/placeholder.jpg" onclick="openTab('galleryapp')">
+                <img class="icon" src="images/gallery.png" onclick="openTab('galleryapp')">
                 <h4 class="apptext">Gallery</h4>
             </div>
             <div class="app" id="funnies">
-                <img class="icon" src="images/placeholder.jpg" onclick="openTab('funnies')">
+                <img class="icon" src="images/gaming.png" onclick="openTab('funnies')">
                 <h4 class="apptext">Games</h4>
             </div>
             <div class="app" id="music">
-                <img class="icon" src="images/placeholder.jpg" onclick="openTab('musicwindow')">
+                <img class="icon" src="images\audio.png" onclick="openTab('musicwindow')">
                 <h4 class="apptext">Music</h4>
             </div>
             <div class="app" id="thoughts">
-                <img class="icon" src="images/placeholder.jpg" onclick="openTab('thoughtswindow')">
+                <img class="icon" src="images/thoughts.png" onclick="openTab('thoughtswindow')">
                 <h4 class="apptext">Thoughts</h4>
             </div>
             <div class="app" id="blog">
-                <img class="icon" src="images/placeholder.jpg" onclick="openTab('blogwindow')">
+                <img class="icon" src="images/writing.png" onclick="openTab('blogwindow')">
                 <h4 class="apptext">Blog</h4>
             </div>
         </div>

@@ -20,6 +20,8 @@ dragElement(document.getElementById("senior"))
 dragElement(document.getElementById("electrathon"))
 dragElement(document.getElementById("inspire"))
 dragElement(document.getElementById("blogwindow"))
+dragElement(document.getElementById("yspaBlog"))
+dragElement(document.getElementById("summer1"))
 
 
 function dragElement(elmnt) {
@@ -92,13 +94,17 @@ document.getElementById("senior").style.visibility = "hidden";
 document.getElementById("electrathon").style.visibility = "hidden";
 document.getElementById("inspire").style.visibility = "hidden";
 document.getElementById("blogwindow").style.visibility = "hidden";
+document.getElementById("yspaBlog").style.visibility = "hidden";
+document.getElementById("summer1").style.visibility = "hidden";
 
 function openTab(id) {
   document.getElementById(id).style.visibility = "visible";
+  raiseWindowZ(id)
 }
 
 let openFilesUK = false
 let openFilesMGS = false
+let openFilesSum26 = false
 
 function exitTab(id) {
   document.getElementById(id).style.visibility = "hidden";
@@ -323,6 +329,17 @@ function checkFilesMGS(ids) {
   else {
     closeFiles(ids)
     openFilesMGS = false
+  }
+}
+
+function checkFilessum26(ids) {
+  if (openFilesSum26 === false) {
+    expandFiles(ids)
+    openFilesSum26 = true
+  }
+  else {
+    closeFiles(ids)
+    openFilesSum26 = false
   }
 }
 
